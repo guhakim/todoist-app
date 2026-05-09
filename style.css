@@ -118,6 +118,12 @@ body {
 }
 
 /* Todo Item */
+#todoList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .todo-item {
   background: #fff;
   border-radius: 8px;
