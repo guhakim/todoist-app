@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>오늘의 Todo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <header>
+    <h1>오늘의 Todo</h1>
+  </header>
+
+  <!-- Input Area -->
+  <div class="input-area">
+    <input id="todoInput" type="text" placeholder="할 일을 입력하세요" autocomplete="off" />
+    <button id="addButton">추가</button>
+  </div>
+
+  <!-- Filter -->
+  <div class="filter-area">
+    <button class="filter-btn active" data-filter="all">전체</button>
+    <button class="filter-btn" data-filter="active">진행중</button>
+    <button class="filter-btn" data-filter="done">완료</button>
+  </div>
+
+  <!-- Todo List -->
+  <div id="todoList"></div>
+
+  <!-- Status Area -->
+  <p id="todoCount">남은 할 일: 0개</p>
+
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
