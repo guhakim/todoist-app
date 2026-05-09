@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f4f6f8;
+  background: #e9ecef;
   display: flex;
   justify-content: center;
   padding: 40px 16px;
@@ -15,31 +15,53 @@ body {
 .container {
   width: 100%;
   max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-/* Header */
-header {
-  margin-bottom: 24px;
+/* ─── Header ─────────────────────────── */
+.header {
+  background: #fff;
+  border: 2px dashed #b0bec5;
+  border-radius: 10px;
+  padding: 20px;
   text-align: center;
 }
 
-header h1 {
-  font-size: 1.8rem;
-  color: #1a1a2e;
+.header h1 {
+  font-size: 1.5rem;
+  color: #1a2e4a;
+  font-weight: 700;
 }
 
-/* Input Area */
+/* ─── Input Area ──────────────────────── */
 .input-area {
+  background: #fff;
+  border: 2px dashed #b0bec5;
+  border-radius: 10px;
+  padding: 16px;
   display: flex;
   gap: 8px;
-  margin-bottom: 12px;
+  flex-direction: column;
+}
+
+.input-area::before {
+  content: 'Input Area (입력창 및 추가 버튼)';
+  font-size: 0.75rem;
+  color: #90a4ae;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
 }
 
 .input-area input {
   flex: 1;
-  padding: 10px 14px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  padding: 10px 12px;
+  border: 1px solid #cfd8dc;
+  border-radius: 6px;
   font-size: 1rem;
   outline: none;
   transition: border-color 0.2s;
@@ -54,9 +76,10 @@ header h1 {
   background: #4a90e2;
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
+  white-space: nowrap;
   transition: background 0.2s;
 }
 
@@ -64,22 +87,41 @@ header h1 {
   background: #357abd;
 }
 
+/* ─── Todo List Section ───────────────── */
+.todo-list-section {
+  background: #f0f4f8;
+  border: 2px dashed #b0bec5;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 180px;
+}
+
+.todo-list-section::before {
+  content: 'Todo List (할 일 목록 출력 영역)';
+  font-size: 0.75rem;
+  color: #90a4ae;
+  text-align: center;
+}
+
 /* Filter */
 .filter-area {
   display: flex;
   gap: 6px;
-  margin-bottom: 16px;
 }
 
 .filter-btn {
   flex: 1;
   padding: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #cfd8dc;
   border-radius: 6px;
   background: #fff;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   transition: all 0.2s;
+  color: #546e7a;
 }
 
 .filter-btn.active {
@@ -88,33 +130,38 @@ header h1 {
   border-color: #4a90e2;
 }
 
-/* Todo Items */
+/* Todo Item */
 .todo-item {
+  background: #fff;
+  border: 2px dashed #b0bec5;
+  border-radius: 8px;
+  padding: 12px 14px;
   display: flex;
   align-items: center;
   gap: 10px;
-  background: #fff;
-  padding: 12px 14px;
-  border-radius: 8px;
-  margin-bottom: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.todo-item::before {
+  content: 'Todo Item (개별 할 일 및 버튼)';
+  display: none;
 }
 
 .todo-item span {
   flex: 1;
-  font-size: 1rem;
-  color: #333;
+  font-size: 0.95rem;
+  color: #37474f;
 }
 
 .todo-item.completed span {
   text-decoration: line-through;
-  color: #aaa;
+  color: #b0bec5;
 }
 
 .todo-item input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   cursor: pointer;
+  accent-color: #4a90e2;
 }
 
 .edit-btn,
@@ -122,32 +169,35 @@ header h1 {
   padding: 4px 10px;
   border: none;
   border-radius: 5px;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   cursor: pointer;
+  transition: background 0.15s;
 }
 
 .edit-btn {
-  background: #e8f0fe;
-  color: #4a90e2;
+  background: #e3f2fd;
+  color: #1976d2;
 }
 
-.edit-btn:hover {
-  background: #c5d8f8;
-}
+.edit-btn:hover { background: #bbdefb; }
 
 .delete-btn {
-  background: #fdecea;
-  color: #d93025;
+  background: #fce4ec;
+  color: #c62828;
 }
 
-.delete-btn:hover {
-  background: #f5c6c2;
-}
+.delete-btn:hover { background: #f8bbd0; }
 
-/* Status Area */
-#todoCount {
-  margin-top: 16px;
+/* ─── Status Area ─────────────────────── */
+.status-area {
+  background: #fff;
+  border: 2px dashed #b0bec5;
+  border-radius: 10px;
+  padding: 14px 20px;
   text-align: center;
+}
+
+#todoCount {
   font-size: 0.9rem;
-  color: #666;
+  color: #546e7a;
 }

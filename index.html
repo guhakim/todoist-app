@@ -10,30 +10,34 @@
 <div class="container">
 
   <!-- Header -->
-  <header>
+  <header class="header">
     <h1>오늘의 Todo</h1>
   </header>
 
   <!-- Input Area -->
-  <div class="input-area">
-    <input id="todoInput" type="text" placeholder="할 일을 입력하세요" autocomplete="off" />
-    <button id="addButton">추가</button>
-  </div>
-
-  <!-- Filter -->
-  <div class="filter-area">
-    <button class="filter-btn active" data-filter="all">전체</button>
-    <button class="filter-btn" data-filter="active">진행중</button>
-    <button class="filter-btn" data-filter="done">완료</button>
-  </div>
+  <section class="input-area">
+    <div class="input-row">
+      <input id="todoInput" type="text" placeholder="할 일을 입력하세요" autocomplete="off" />
+      <button id="addButton">추가</button>
+    </div>
+  </section>
 
   <!-- Todo List -->
-  <div id="todoList"></div>
+  <section class="todo-list-section">
+    <div class="filter-area">
+      <button class="filter-btn active" data-filter="all">전체</button>
+      <button class="filter-btn" data-filter="active">진행중</button>
+      <button class="filter-btn" data-filter="done">완료</button>
+    </div>
+    <div id="todoList"></div>
+  </section>
 
   <!-- Status Area -->
-  <p id="todoCount">남은 할 일: 0개</p>
+  <section class="status-area">
+    <p id="todoCount">남은 할 일: 0개</p>
+  </section>
 
 </div>
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
