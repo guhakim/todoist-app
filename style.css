@@ -23,10 +23,10 @@ body {
 /* ─── Header ─────────────────────────── */
 .header {
   background: #fff;
-  border: 2px dashed #b0bec5;
   border-radius: 10px;
   padding: 20px;
   text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
 .header h1 {
@@ -38,18 +38,12 @@ body {
 /* ─── Input Area ──────────────────────── */
 .input-area {
   background: #fff;
-  border: 2px dashed #b0bec5;
   border-radius: 10px;
   padding: 16px;
   display: flex;
   gap: 8px;
   flex-direction: column;
-}
-
-.input-area::before {
-  content: 'Input Area (입력창 및 추가 버튼)';
-  font-size: 0.75rem;
-  color: #90a4ae;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
 .input-row {
@@ -90,20 +84,13 @@ body {
 /* ─── Todo List Section ───────────────── */
 .todo-list-section {
   background: #f0f4f8;
-  border: 2px dashed #b0bec5;
   border-radius: 10px;
   padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   min-height: 180px;
-}
-
-.todo-list-section::before {
-  content: 'Todo List (할 일 목록 출력 영역)';
-  font-size: 0.75rem;
-  color: #90a4ae;
-  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
 /* Filter */
@@ -133,17 +120,12 @@ body {
 /* Todo Item */
 .todo-item {
   background: #fff;
-  border: 2px dashed #b0bec5;
   border-radius: 8px;
   padding: 12px 14px;
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.todo-item::before {
-  content: 'Todo Item (개별 할 일 및 버튼)';
-  display: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 }
 
 .todo-item span {
@@ -191,10 +173,10 @@ body {
 /* ─── Status Area ─────────────────────── */
 .status-area {
   background: #fff;
-  border: 2px dashed #b0bec5;
   border-radius: 10px;
   padding: 14px 20px;
   text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
 #todoCount {
